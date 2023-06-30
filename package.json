@@ -4,8 +4,9 @@
   "description": "HIIII",
   "main": "index.js",
   "scripts": {
-    "setup-db": "node server/database/setup-db.js",
-    "dev": "nodemon -L server/index.js "
+    "dev": "nodemon -L ./server/index.js",
+    "start": "node ./server/index.js",
+    "setup-db": "node ./server/database/connect.js"
   },
   "keywords": [],
   "author": "",
