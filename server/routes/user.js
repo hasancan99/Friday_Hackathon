@@ -1,14 +1,11 @@
-// Set up the routes for user registration and login requests.
-// When a client sends a POST request to '/register' or '/login',
-// it calls the 'register' or 'login' methods in the user controller respectively.
+const express = require ('express')
+const UserController = require('../controllers/user-controller')
 
-const { Router } = require('express');
+const router = express.Router()
 
-const userController = require('../controllers/user.js');
+router.get('/:id', UserController.getOneById)
 
-const userRouter = Router();
 
-userRouter.post("/register", userController.register);
-userRouter.post("/login", userController.login);
 
-module.exports = userRouter;
+
+module.exports = router
