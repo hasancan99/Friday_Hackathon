@@ -1,0 +1,61 @@
+/* assets/styles.css */
+
+/* Body styles */
+body {
+    background-color: #f6e5f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.main-page-header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #ff7aff, #ff85e4, #cf99e4);
+    color: #ffffff;
+}
+
+#heading {
+    font-size: 32px;
+    margin: 0;
+}
+
+#note {
+    font-style: italic;
+}
+
+hr {
+    border-color: #ffffff;
+}
+
+/* Main styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #e06fbd;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+a:hover {
+    background-color: #b44b8b;
+}
