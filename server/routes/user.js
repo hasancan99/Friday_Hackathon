@@ -1,9 +1,9 @@
 const express = require ('express')
-const UserController = require('../controllers/user-controller')
+const userController = require('../controllers/user-controller.js')
 
 const router = express.Router()
 
-router.get('/:id', UserController.getOneById)
+router.post("/register", userController.register);
 
 
 
