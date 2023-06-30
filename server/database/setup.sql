@@ -14,7 +14,8 @@ CREATE TABLE post (
     user_id INT NOT NULL,
     title VARCHAR (100) NOT NULL,
     content VARCHAR (500) NOT NULL,
-    post_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_edited TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (post_id),
     FOREIGN KEY (user_id) REFERENCES user_account ("user_id")
 );
