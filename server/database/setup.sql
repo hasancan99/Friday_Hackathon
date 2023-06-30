@@ -14,7 +14,7 @@ CREATE TABLE post (
     user_id INT NOT NULL,
     title VARCHAR (100) NOT NULL,
     content VARCHAR (500) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_at DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     last_edited TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (post_id),
     FOREIGN KEY (user_id) REFERENCES user_account ("user_id")
@@ -37,11 +37,12 @@ VALUES
 ('User3', 'password3');
 
 
-INSERT INTO post (user_id, title, content, last_edited)
+INSERT INTO post (user_id, title, content, created_at, last_edited)
 VALUES 
-(1, 'First Post', 'This is the content of the first post.', CURRENT_TIMESTAMP),
-(2, 'Second Post', 'This is the content of the second post.', CURRENT_TIMESTAMP),
-(3, 'Third Post', 'This is the content of the third post.', CURRENT_TIMESTAMP);
+(1, 'First Post', 'This is the content of the first post.', '2023-04-21' , CURRENT_TIMESTAMP),
+(2, 'Second Post', 'This is the content of the second post.', '2022-09-06', CURRENT_TIMESTAMP),
+(3, 'Third Post', 'This is the content of the third post.', '2023-06-01', CURRENT_TIMESTAMP),
+(1, 'another post', 'i am another post', '2021-12-13', CURRENT_TIMESTAMP);
 
 
 INSERT INTO token (user_id, token, expiry_date)
