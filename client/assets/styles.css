@@ -17,12 +17,16 @@ body {
 }
 
 #heading {
-    font-size: 32px;
+    font-size: 82px;
     margin: 0;
+    font-family: 'Sacramento', bold;
 }
 
 #note {
-    font-style: italic;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Dancing Script';
 }
 
 hr {
@@ -32,6 +36,7 @@ hr {
 /* Main styles */
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 100px);
@@ -58,4 +63,54 @@ a {
 
 a:hover {
     background-color: #b44b8b;
+}
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    font-size: 14px;
+    width: 275px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #e06fbd;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #b44b8b;
+}
+p {
+    margin-top: 10px;
+    text-align: center;
 }

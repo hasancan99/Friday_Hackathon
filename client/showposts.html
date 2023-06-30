@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/showposts.js" defer></script>
+    <title>Discretion</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Log out</a>
+    </nav>
+    <header class="main-page-header">
+        <h1 id="heading">Dear Diary</h1>
+    </header>
+    <hr />
+    <main>
+        <div class="container" id="posts">
+
+        </div>
+        <hr />
+        <form id="post-form">
+            <fieldset>
+                <label for="title">Entry :</label>
+                <input type="text" id="title" name="title" required>
+            </fieldset>
+            <fieldset>
+                <label for="title"></label>
+                <textarea id="content" name="content" required></textarea>
+            </fieldset>
+            <input type="submit" value="Post">
+        </form>
+    </main>
+</body>
+</html>
