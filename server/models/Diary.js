@@ -17,6 +17,14 @@ class DiaryEntry {
         }
         return response.rows.map(g => new DiaryEntry(g));
     }
+
+    static async getEntryByDate(id, date) {
+        const response = await db.query('SELECT * FROM post WHERE user_id = $1 AND created_at = $2', [id, date])
+        if(response.rows.length === 0) {
+            throw new Error("No entries available for that date")
+        }
+        return response.rows.map(g => new DiaryEntry(g))
+    }
 } 
 
 module.exports = DiaryEntry
