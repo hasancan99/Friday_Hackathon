@@ -5,6 +5,7 @@ const router = express.Router()
 
 
 router.get('/:userid&:year&:month&:day', DiaryController.getEntryByDate)
+router.get('/:userid&:year', DiaryController.getEntryByYear)
 router.get('/:userid', DiaryController.getAllEntries)
 
 
