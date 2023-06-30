@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 
 const logRoutes = require('./middleware/logger');
+const userRoutes = require('./routes/user')
+const diaryRoutes = require('./routes/diary')
 
 
 const app = express();
@@ -18,6 +20,8 @@ app.get('/', (req,res) => {
 })
 
 app.use(logRoutes);
+app.use('/users', userRoutes)
+app.use('/diary', diaryRoutes)
 
 
 
