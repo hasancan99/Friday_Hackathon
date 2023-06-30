@@ -28,3 +28,25 @@ CREATE TABLE token (
     PRIMARY KEY (token_id),
     FOREIGN KEY (user_id) REFERENCES user_account ("user_id")
 );
+
+
+INSERT INTO user_account (username, password)
+VALUES 
+('User1', 'password1'),
+('User2', 'password2'),
+('User3', 'password3');
+
+
+INSERT INTO post (user_id, title, content, last_edited)
+VALUES 
+(1, 'First Post', 'This is the content of the first post.', CURRENT_TIMESTAMP),
+(2, 'Second Post', 'This is the content of the second post.', CURRENT_TIMESTAMP),
+(3, 'Third Post', 'This is the content of the third post.', CURRENT_TIMESTAMP);
+
+
+INSERT INTO token (user_id, token, expiry_date)
+VALUES 
+(1, '123e4567-e89b-12d3-a456-426614174000', CURRENT_TIMESTAMP + INTERVAL '7 day'),
+(2, '123e4567-e89b-12d3-a456-426614174001', CURRENT_TIMESTAMP + INTERVAL '7 day'),
+(3, '123e4567-e89b-12d3-a456-426614174002', CURRENT_TIMESTAMP + INTERVAL '7 day');
+
